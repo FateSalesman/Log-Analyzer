@@ -143,12 +143,6 @@ const LogViewer: React.FC = () => {
         />
 
         <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', ml: 'auto' }}>
-          <TextField
-            size="small"
-            placeholder="Search logs..."
-            value={filters.searchTerm || ''}
-            onChange={e => handleFilterChange('searchTerm', e.target.value)}
-          />
           <Tooltip title="Refresh">
             <IconButton onClick={fetchLogs} disabled={loading}>
               <RefreshIcon />
